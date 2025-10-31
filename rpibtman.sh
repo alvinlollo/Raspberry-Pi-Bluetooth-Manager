@@ -628,7 +628,7 @@ if [[ "$CONFIRM_DEVICE_TETHERING" == y ]]; then
 
 	get_default_bt_controller=$($list_bt_controller_available | grep default | awk '{print $2" "$3" "$4}')
 	get_default_bt_controller_MAC=$($list_bt_controller_available | grep default | awk '{print $2}')
-	if $list_bt_devices_paired | awk '{print NR" "$2" "$3}' > $tmp_paired_devs; then echo "$show_info Paired BT list saved!"; else echo "$show_error Could not save paired BT list!"; fi
+	if $list_bt_devices_paired | grep '^Device' | awk '{print NR" "$2" "$3}' > $tmp_paired_devs; then echo "$show_info Paired BT list saved!"; else echo "$show_error Could not save paired BT list!"; fi
 
 	echo "$show_execute We'll pre-check the default BT controller & paired devices"
 
