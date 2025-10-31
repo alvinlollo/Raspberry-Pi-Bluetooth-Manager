@@ -100,7 +100,7 @@ set_system_bt_controller_alias="bluetoothctl -- system-alias"
 reset_system_bt_controller_alias="bluetoothctl -- reset-alias"
 #
 list_bt_devices="bluetoothctl -- devices"
-list_bt_devices_paired="bluetoothctl -- paired-devices"
+list_bt_devices_paired="bluetoothctl -- devices Paired"
 #
 power_bt_controller_on="bluetoothctl -- power on"
 power_bt_controller_off="bluetoothctl -- power off"
